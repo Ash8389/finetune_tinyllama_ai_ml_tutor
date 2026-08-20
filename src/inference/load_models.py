@@ -5,5 +5,7 @@ def load(base_model, adapter_path):
         base_model,
         adapter_path
     )
+    
+    model.eval()
 
     return model

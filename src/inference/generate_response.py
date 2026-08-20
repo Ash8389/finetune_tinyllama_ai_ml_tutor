@@ -1,6 +1,6 @@
 import torch
 
-def response(message, model, tokenizer):
+def response(model, tokenizer, message):
     text = tokenizer.apply_chat_template(
         message,
         tokenize=False,
@@ -16,7 +16,7 @@ def response(message, model, tokenizer):
 
         output = model.generate(
             **inputs,
-            max_new_tokens=150,
+            max_new_tokens=300,
             temperature=0.7,
             do_sample=True,
         )

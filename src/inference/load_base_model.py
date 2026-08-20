@@ -7,4 +7,6 @@ def load_base_model(model_name: str, bnb_config):
         device_map="auto"
     )
 
+    base_model.eval()
+
     return base_model
